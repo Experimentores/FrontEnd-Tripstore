@@ -13,7 +13,7 @@ import {OrderDetailComponent} from "./components/order-detail/order-detail.compo
 
 const routes: Routes = [
   {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
-  {path: 'login', component: LoginComponent},
+  {path: 'login', component: DashboardComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'home', component: HomeComponent, canActivate: [AuthService]},
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthService]},
