@@ -51,6 +51,7 @@ export class LoginComponent implements AfterViewInit, OnInit{
         } else {
           this.snackBar.open('Invalid username or password.', 'Close', snackBarConfig);
           console.log('User not validated');
+
         }
         this.username = '';
         this.password = '';

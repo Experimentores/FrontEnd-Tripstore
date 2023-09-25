@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit{
     }
   }
   checkExistingCart(userId: string): Observable<boolean> {
-    const url = `https://back-end-tripstore-production.up.railway.app/api/tripstore/v1/shopping-carts`;
+    const url = `https://tripstoreapi.onrender.com/api/tripstore/v1/shopping-carts`;
     return this.http.get<any[]>(url).pipe(
       map((carts: any[]) => {
         return carts.some(cart => cart.user && cart.user.id === userId);
@@ -50,8 +50,8 @@ export class HomeComponent implements OnInit{
   }
 
   createCart(userId: string): Observable<any> {
-    const createUrl = 'https://back-end-tripstore-production.up.railway.app/api/tripstore/v1/shopping-carts';
-    const getAllUrl = 'https://back-end-tripstore-production.up.railway.app/api/tripstore/v1/shopping-carts';
+    const createUrl = 'https://tripstoreapi.onrender.com/api/tripstore/v1/shopping-carts';
+    const getAllUrl = 'https://tripstoreapi.onrender.com/api/tripstore/v1/shopping-carts';
     const currentDate = new Date().toISOString();
     const cartData = {
       cartDateCreated: currentDate,
